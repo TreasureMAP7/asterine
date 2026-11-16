@@ -13,9 +13,9 @@ app.use(express.json());
 
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/order", orderRouter);
-app.use("/api/v1/product", authRouter);
-app.use("/api/v1/restaurant", authRouter);
-app.use("/api/v1/staff", authRouter);
+app.use("/api/v1/product", productRouter);
+app.use("/api/v1/restaurant", restaurantRouter);
+app.use("/api/v1/staff", staffRouter);
 
 app.get("/", (req, res) => {
   res.send("Welcome to MCSME App!");
