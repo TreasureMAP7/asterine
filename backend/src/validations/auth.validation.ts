@@ -1,0 +1,4 @@
+import { z } from "zod"
+
+// TODOS: BUAT VALIDASI, TAPI BIKIN SCHEMANYA DULU
+

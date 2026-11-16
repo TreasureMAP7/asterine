@@ -1,0 +1,3 @@
+export class StaffController {
+  // TODOS: BIKIN STAFF CONTROLLER, TAPI BIKIN SCHEMANYA DULU
+}

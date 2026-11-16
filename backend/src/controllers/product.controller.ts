@@ -1,0 +1,3 @@
+export class ProductController {
+  // TODOS: BIKIN PRODUCT CONTROLLER, TAPI BIKIN SCHEMANYA DULU
+}

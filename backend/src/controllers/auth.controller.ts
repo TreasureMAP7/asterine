@@ -1,0 +1,3 @@
+export class AuthController {
+  // TODOS: BIKIN AUTH CONTROLLER, TAPI BIKIN SCHEMANYA DULU
+}

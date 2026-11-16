@@ -1,0 +1,3 @@
+export class RestaurantController {
+  // TODOS: BIKIN RESTAURANT CONTROLLER, TAPI BIKIN SCHEMANYA DULU
+}
