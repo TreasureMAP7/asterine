@@ -1,9 +1,9 @@
-import { Router } from "express";
+import { Request, Response, Router } from "express";
 import { AuthController } from "../controllers/auth.controller";
 
 const router = Router();
 
-router.post("/");
+// router.post("/");
 
 // TODOS: DAFTARKAN CONTROLLER, TAPI SELESAIKAN SCHEMA DULU
 

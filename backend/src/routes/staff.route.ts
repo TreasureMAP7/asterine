@@ -3,7 +3,7 @@ import { StaffController } from "../controllers/staff.controller";
 
 const router = Router();
 
-router.post("/");
+// router.post("/");
 
 // TODOS: DAFTARKAN CONTROLLER, TAPI SELESAIKAN SCHEMA DULU
 

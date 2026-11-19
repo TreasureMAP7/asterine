@@ -3,7 +3,7 @@ import { OrderController } from "../controllers/order.controller";
 
 const router = Router();
 
-router.post("/");
+// router.post("/");
 
 // TODOS: DAFTARKAN CONTROLLER, TAPI SELESAIKAN SCHEMA DULU
 

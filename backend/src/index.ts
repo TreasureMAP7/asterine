@@ -1,10 +1,12 @@
 import express from "express";
+import swaggerUi from "swagger-ui-express";
 
 import authRouter from "./routes/auth.route";
 import orderRouter from "./routes/order.route";
 import productRouter from "./routes/product.route";
 import restaurantRouter from "./routes/restaurant.route";
 import staffRouter from "./routes/staff.route";
+import specs from "./config/swagger";
 
 const app = express();
 const port = 5000;
@@ -16,6 +18,8 @@ app.use("/api/v1/order", orderRouter);
 app.use("/api/v1/product", productRouter);
 app.use("/api/v1/restaurant", restaurantRouter);
 app.use("/api/v1/staff", staffRouter);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
 
 app.get("/", (req, res) => {
   res.send("Welcome to MCSME App!");
