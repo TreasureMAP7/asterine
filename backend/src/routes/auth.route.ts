@@ -1,10 +1,22 @@
-import { Request, Response, Router } from "express";
-import { AuthController } from "../controllers/auth.controller";
+import { Router } from "express";
+import AuthController from "../controllers/auth.controller";
+import { authenticate } from "../middlewares/auth.middleware";
+import { uploadSingleImage } from "../middlewares/upload.middleware";
 
 const router = Router();
 
-// router.post("/");
+router.post("/register", AuthController.register);
+router.post("/login", AuthController.login);
 
-// TODOS: DAFTARKAN CONTROLLER, TAPI SELESAIKAN SCHEMA DULU
+router.get("/profile", authenticate, AuthController.getUser);
+
+router.patch("/profile", authenticate, AuthController.updateProfile);
+router.patch("/password", authenticate, AuthController.changePassword);
+router.patch(
+  "/profile/image",
+  authenticate,
+  uploadSingleImage,
+  AuthController.updateProfileImage,
+);
 
 export default router;

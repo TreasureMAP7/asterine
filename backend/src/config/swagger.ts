@@ -5,7 +5,7 @@ const options: swaggerJsdoc.OAS3Options = {
     openapi: "3.0.3",
     info: {
       title: "Asterine API",
-      version: "0.0.1",
+      version: "0.2.0",
       description: "API documentation for Asterine",
     },
     servers: [
@@ -24,7 +24,7 @@ const options: swaggerJsdoc.OAS3Options = {
       },
     },
   },
-  apis: ["./src/routes/**/*.ts"],
+  apis: ["./src/docs/**/*.ts"],
 };
 
 const specs = swaggerJsdoc(options);

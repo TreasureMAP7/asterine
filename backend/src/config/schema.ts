@@ -40,7 +40,7 @@ export const usersTable = mysqlTable("users", {
   username: varchar("username", { length: 50 }).notNull(),
   email: varchar("email", { length: 100 }).notNull().unique(),
   phone: varchar("phone", { length: 20 }).notNull().unique(),
-  password: varchar("password", { length: 50 }).notNull(),
+  password: varchar("password", { length: 255 }).notNull(),
   role: mysqlEnum("role", userRoles).notNull().default("user"),
   imageUrl: text("image_url"),
   imagePublicId: varchar("image_public_id", { length: 255 }),
