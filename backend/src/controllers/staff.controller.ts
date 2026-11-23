@@ -1,3 +1,27 @@
+import { Response } from "express";
+import { AuthRequest } from "../middlewares/auth.middleware";
+
 export class StaffController {
-  // TODOS: BIKIN STAFF CONTROLLER, TAPI BIKIN SCHEMANYA DULU
+  getStaff = async (req: AuthRequest, res: Response) => {
+    return res.status(501).json({
+      success: false,
+      message: "Not implemented yet",
+    });
+  };
+
+  getStaffById = async (req: AuthRequest, res: Response) => {
+    return res.status(501).json({
+      success: false,
+      message: "Not implemented yet",
+    });
+  };
+
+  removeStaff = async (req: AuthRequest, res: Response) => {
+    return res.status(501).json({
+      success: false,
+      message: "Not implemented yet",
+    });
+  };
 }
+
+export default new StaffController();

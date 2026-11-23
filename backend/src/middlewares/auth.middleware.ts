@@ -6,6 +6,7 @@ export interface AuthRequest extends Request {
     id: number;
     username: string;
     role: string;
+    restaurantId: number | null;
   };
 }
 
@@ -30,6 +31,7 @@ export const authenticate = (
       id: number;
       username: string;
       role: string;
+      restaurantId: number | null;
     };
 
     req.user = decoded;

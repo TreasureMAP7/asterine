@@ -8,15 +8,18 @@ const router = Router();
 router.post("/register", AuthController.register);
 router.post("/login", AuthController.login);
 
-router.get("/profile", authenticate, AuthController.getUser);
+router.use(authenticate);
 
-router.patch("/profile", authenticate, AuthController.updateProfile);
-router.patch("/password", authenticate, AuthController.changePassword);
+router.get("/me", AuthController.getUser);
+
+router.patch("/profile", AuthController.updateProfile);
+router.patch("/password", AuthController.changePassword);
 router.patch(
   "/profile/image",
-  authenticate,
+
   uploadSingleImage,
   AuthController.updateProfileImage,
 );
+router.delete("/delete", AuthController.deleteUser);
 
 export default router;

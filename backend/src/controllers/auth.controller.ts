@@ -432,6 +432,13 @@ export class AuthController {
       });
     }
   };
+
+  deleteUser = async (req: AuthRequest, res: Response) => {
+    return res.status(501).json({
+      success: false,
+      message: "Not implemented yet",
+    });
+  };
 }
 
 export default new AuthController();

@@ -11,6 +11,7 @@ import {
 
 export const userRoles = ["user", "owner", "staff", "admin"] as const;
 export const applicationStatuses = ["approved", "pending", "rejected"] as const;
+export const applicationTypes = ["employment", "resignation"] as const
 export const orderStatuses = [
   "completed",
   "pending",
@@ -63,6 +64,7 @@ export const applicationsTable = mysqlTable("employments", {
     }),
   message: text("message"),
   status: mysqlEnum("status", applicationStatuses).notNull().default("pending"),
+  type: mysqlEnum("type", applicationTypes).notNull(),
   fileUrl: text("file_url"),
   filePublicId: varchar("file_public_id", { length: 255 }),
   fileName: varchar("file_name", { length: 255 }),

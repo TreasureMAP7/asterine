@@ -1,10 +1,14 @@
 import { Router } from "express";
-import { StaffController } from "../controllers/staff.controller";
+import StaffController from "../controllers/staff.controller";
+import { authenticate } from "../middlewares/auth.middleware";
+import { isOwner } from "../middlewares/role.middleware";
 
 const router = Router();
 
-// router.post("/");
+router.use(authenticate, isOwner);
 
-// TODOS: DAFTARKAN CONTROLLER, TAPI SELESAIKAN SCHEMA DULU
+router.get("/", StaffController.getStaff);
+router.get("/:staffId", StaffController.getStaffById);
+router.delete("/:staffId", StaffController.removeStaff);
 
 export default router;

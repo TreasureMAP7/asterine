@@ -2,6 +2,7 @@
  * @swagger
  * tags:
  *   name: Auth
+ *   description: Authentication, user management, and profile customization
  */
 
 /**
@@ -74,7 +75,7 @@
 
 /**
  * @swagger
- * /auth/profile:
+ * /auth/me:
  *   get:
  *     summary: Get current authenticated user
  *     tags: [Auth]
